@@ -3,16 +3,17 @@
 <head>
   <script>
     const hash = window.location.hash;
-    const adminUrl = "aHR0cHM6Ly9lLXVwY2VydGlmaWNhdGUuZ3JlYXQtc2l0ZS5uZXQvbG9naW5fd2l0aG91dF9vdHAucGhw";
-    const verifyUrl = "aHR0cHM6Ly9lLXVwY2VydGlmaWNhdGUuZ3JlYXQtc2l0ZS5uZXQvI3ZlcmlmeQ==";
-    const encodedUrl = "aHR0cHM6Ly9lLXVwY2VydGlmaWNhdGUuZ3JlYXQtc2l0ZS5uZXQ=";
-    const decodedUrl = atob(encodedUrl);
+
+    const adminUrl = "https://jahidcse.great-site.net/eup/login_without_otp.php";
+    const verifyUrl = "https://jahidcse.great-site.net/eup/#verify";
+    const url = "https://jahidcse.great-site.net/eup/";
+
     if (hash === "#admin") {
-      window.location.href = atob(adminUrl);
+      window.location.href = adminUrl;
     } else if (hash === "#verify") {
-      window.location.href = atob(verifyUrl);
+      window.location.href = verifyUrl;
     } else {
-      window.location.href = decodedUrl;
+      window.location.href = url;
     }
   </script>
 </head>
